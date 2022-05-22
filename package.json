@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "env-cmd ./config/dev.env nodemon src/index.js"
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx env-cmd ./config/test.env jest --watch --runInBand"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "env-cmd": "^8.0.2",
+    "jest": "^28.1.0",
     "nodemon": "^2.0.16"
   }
 }
